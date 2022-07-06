@@ -18,6 +18,7 @@ class FishData extends Component {
   }
 
   render() {
+    console.log(this.state.fishSpecies[3])
     return (
       <h1>Fish Data</h1>
     )

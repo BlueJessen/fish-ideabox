@@ -9,7 +9,7 @@ function App() {
     <div>
       <h1>What kind of fish are you?</h1>
       <Form />
-      <FishData />
+      // <FishData />
     </div>
   )
 }
