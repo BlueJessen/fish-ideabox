@@ -10,7 +10,9 @@ class FishData extends Component {
   }
 
   render() {
-
+    return (
+      <h1>Fish Data</h1> 
+    )
   }
 }
 export default FishData
