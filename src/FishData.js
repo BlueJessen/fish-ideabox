@@ -7,7 +7,7 @@ class FishData extends Component {
     this.state = {
       fishSpecies: []
     }
-
+}
     componentDidMount(){
       fetch('https://www.fishwatch.gov/api/species')
       .then(response => response.json())
@@ -15,7 +15,6 @@ class FishData extends Component {
         fishSpecies: data
       }))
     }
-  }
 
   render() {
     console.log(this.state.fishSpecies[3])

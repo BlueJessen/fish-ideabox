@@ -6,10 +6,13 @@ import FishData from './FishData'
 
 function App() {
   return (
-    <div>
+    <div className='page-container'>
+    <header>
       <h1>What kind of fish are you?</h1>
+      <p>🐟🐠</p>
+    </header>
       <Form />
-      // <FishData />
+      <FishData />
     </div>
   )
 }

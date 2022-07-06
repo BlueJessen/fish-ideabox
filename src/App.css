@@ -1,0 +1,16 @@
+
+header {
+  width: 40vw;
+  height: 10vh;
+  background-color: #02d4e1;
+  text-align: center;
+  color: indigo;
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
