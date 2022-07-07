@@ -9,19 +9,29 @@ class Form extends Component {
       user: '',
       favoriteColor: '',
       location: '',
-      
+
     }
   }
 
+  handleChange = (event) => {
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+  }
   render() {
     return(
       <form>
         <label>What's Your Name Land Dweller?</label>
         <br/>
-        <input type='text' name='user' placeholder='Whats your name?'/>
+        <input onChange={this.handleChange} type='text' name='user' placeholder='Whats your name?'/>
         <br/>
         <h1> Select your fave color you biped(derogatory):</h1>
-        <select name='favoriteColor'>
+        <select onClick={this.handleChange} name='favoriteColor'>
         <br/>
           <option>--Please Select--</option>
           <option>Scarlet</option>
@@ -44,26 +54,26 @@ class Form extends Component {
         <br/>
         <h1> What type of place do you prefer to live(although it would be on land, so lame):</h1>
         <br/>
-        <input type='radio' name='location' value='desert'/>
+        <input onChange={this.handleChange} type='radio' name='location' value='desert'/>
         <label> I like dry, hot and dusty!</label>
             <br/>
-        <input type='radio' name='location' value='pacific northwest'/>
+        <input onChange={this.handleChange} type='radio' name='location' value='pacific northwest'/>
         <label> I love the rain, and like to keep the temp pretty avg all year</label>
             <br/>
-        <input type='radio' name='location' value='midwest'/>
+        <input onChange={this.handleChange} type='radio' name='location' value='midwest'/>
         <label> I want all four seasons, I love snow and I love summer</label>
             <br/>
-        <input type='radio' name='location' value='New England'/>
+        <input onChange={this.handleChange} type='radio' name='location' value='New England'/>
         <label> I prefer the cold! Keep it snowy</label>
             <br/>
-        <input type='radio' name='location' value='mountain west'/>
+        <input onChange={this.handleChange}  type='radio' name='location' value='mountain west'/>
         <label> I like it dry but I can't live without snow</label>
             <br/>
-        <input type='radio' name='location' value='southeast coast'/>
+        <input onChange={this.handleChange} type='radio' name='location' value='southeast coast'/>
         <label> I like it hot but cant do without rain!</label>
         <br/>
         <br/>
-        <button>Submit</button>
+        <button onClick={this.handleSubmit}>Submit</button>
       </form>
     )
 
